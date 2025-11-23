@@ -1,0 +1,2 @@
+Technical write‑up
+AI Storyteller is a full‑stack web app that generates multi‑scene stories with consistent characters. Backend: Node.js + Express. Frontend: plain HTML/CSS/JS. AI integration uses Hugging Face’s free Inference API via the OpenAI‑compatible /v1/chat/completions endpoint with model HuggingFaceTB/SmolLM3-3B. The app builds a prompt from user inputs (title, genre, tone, characters, world, scenes), calls Hugging Face, parses the chat‑completion response, and renders the story in the UI. It demonstrates end‑to‑end AI integration and can be run locally or deployed

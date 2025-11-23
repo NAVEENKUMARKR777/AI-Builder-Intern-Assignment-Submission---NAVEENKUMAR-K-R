@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Storyteller</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>AI Storyteller</h1>
+      <p>Create multi-scene stories with consistent characters and a clear narrative arc.</p>
+    </header>
+
+    <main class="layout">
+      <section class="controls">
+        <form id="story-form" class="form">
+          <div class="field-group">
+            <label for="title">Story title (optional)</label>
+            <input id="title" name="title" type="text" placeholder="The Lost City of Auria" />
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="genre">Genre</label>
+              <select id="genre" name="genre">
+                <option value="">Let the AI decide</option>
+                <option>Fantasy</option>
+                <option>Science fiction</option>
+                <option>Mystery</option>
+                <option>Romance</option>
+                <option>Adventure</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="tone">Tone</label>
+              <select id="tone" name="tone">
+                <option value="">Neutral</option>
+                <option>Light-hearted</option>
+                <option>Dark</option>
+                <option>Epic</option>
+                <option>Wholesome</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="mainCharacters">Main characters (required)</label>
+            <textarea id="mainCharacters" name="mainCharacters" rows="3" required placeholder="E.g. Lina, a curious engineer; Arun, a sarcastic historian; Kiro, a small robot sidekick."></textarea>
+          </div>
+
+          <div class="field-group">
+            <label for="worldDescription">World / setting</label>
+            <textarea id="worldDescription" name="worldDescription" rows="3" placeholder="E.g. A floating archipelago of islands powered by ancient crystals."></textarea>
+          </div>
+
+          <div class="field-row field-row--bottom">
+            <div class="field-group">
+              <label for="scenesCount">Number of scenes</label>
+              <input id="scenesCount" name="scenesCount" type="number" min="2" max="8" value="4" />
+            </div>
+            <button id="generate-btn" type="submit" class="primary-btn">Generate story</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="output">
+        <h2>Story</h2>
+        <div id="status" class="status"></div>
+        <div id="story" class="story"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Powered by a free Hugging Face text-generation model.</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
